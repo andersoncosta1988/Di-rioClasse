@@ -1,0 +1,1 @@
+C:\Users\Alisson\source\repos\DiarioDeClasse\DiarioDeClasse\DiarioDeClasse.UWP\DiarioDeClasse.UWP.csproj;x86

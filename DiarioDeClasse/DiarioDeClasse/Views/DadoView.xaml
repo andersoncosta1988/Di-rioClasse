@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioDeClasse.Views.DadoView"
+             Title="{Binding Path=Disciplina.nome}">
+
+        <StackLayout Padding="25">
+            <TableView Intent="Form">
+                <TableRoot Title="Dados">
+                    <TableSection Title="Dados Aluno">
+                        <EntryCell Label="Matricula:" Keyboard="Text" Text="{Binding Matricula}" />
+                        <EntryCell Label="Nome:" Keyboard="Text" Text="{Binding Nome}" />
+                        <EntryCell Label="Fone:" Keyboard="Telephone" Text="{Binding Fone}" />
+                        <EntryCell Label="E-mail:" Keyboard="Email" Text="{Binding Email}"/>
+                    </TableSection>
+                    <TableSection Title="Data e Hora">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                                <Label Text="Data:" HorizontalOptions="StartAndExpand"></Label>
+                                <DatePicker HorizontalOptions="End"
+                                    Date="{Binding DataMatricula}"></DatePicker>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="16,0,16,0">
+                                <Label Text="Hora:" HorizontalOptions="StartAndExpand"></Label>
+                                <TimePicker HorizontalOptions="End"
+                                    Time="{Binding HoraMatricula}"></TimePicker>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Matricular" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+
+</ContentPage>
